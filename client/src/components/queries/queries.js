@@ -5,6 +5,7 @@ const getBooksQuery = gql`{
     books{
       name
       genre
+      id
       author {
         name
         age
@@ -32,4 +33,23 @@ const addBookMutation = gql`
     }
 `
 
-export {getAuthorsQuery, getBooksQuery, addBookMutation};
+// get book query based on authorId
+const getBookQuery = gql`
+query($id:ID){
+    book(id:$id){
+        name
+        genre
+        author{
+          name
+          age
+          book{
+            name
+            genre
+            id
+          }
+        }
+      }
+}
+`
+
+export {getAuthorsQuery, getBooksQuery, addBookMutation, getBookQuery};

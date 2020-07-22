@@ -3,6 +3,7 @@ import BookList from './components/BookList';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from 'react-apollo';
 import AddBook from './components/AddBook';
+// import BooksDetails from './components/BookDetails';
 
 // apollo client 
 const client = new ApolloClient({
