@@ -66,17 +66,17 @@ class AddBook extends Component {
         return(
             <form id="add-book" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
-                    <label>Book Name</label>
+                    <label className="label">Book Name</label>
                     <input type="text" onChange={(e) => this.setState({ name:e.target.value })} placeholder="Book Name" />
                 </div>
 
                 <div className="field">
-                    <label>Genre</label>
+                    <label className="label">Genre</label>
                     <input type="text" onChange={(e) => this.setState({ genre:e.target.value })} placeholder="Genre" />
                 </div>
 
                 <div className="field">
-                    <label>Author</label>
+                    <label className="label">Author</label>
                         <select onChange={(e) => this.setState({ authorId:e.target.value })}>
                             <option>Select Authors</option>
                             {this.getAuthors()}

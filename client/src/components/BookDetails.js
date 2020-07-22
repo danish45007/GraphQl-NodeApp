@@ -17,7 +17,7 @@ class BooksDetails extends Component {
                         {
                             book.author.book.map(item => {
                                 return(
-                                    <li key={item.id}>{item.name} {item.genre}</li>
+                                    <li key={item.id}>{item.name} <strong>{item.genre}</strong></li>
                                 )
                             })
                         }
